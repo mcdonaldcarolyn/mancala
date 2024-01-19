@@ -66,5 +66,11 @@ def askForPlayerMove(playerTurn, board):
         if response == 'QUIT':
             print('THanks for playing')
             sys.exit
+
+        if (playerTurn == '1' and response not in PLAYER_1_PITS) or
+           (playerTurn == '2' and response not in PLAYER_2_PITS):
+            print (please pick a letter on your side)
+            continue 
+        if board.get(response)== 0:
         
 
