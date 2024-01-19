@@ -72,5 +72,21 @@ def askForPlayerMove(playerTurn, board):
             print (please pick a letter on your side)
             continue 
         if board.get(response)== 0:
+            print('pick a non empty pits.')
+            continue
+        return response
+
+def makeMove(board, playerTurn, pit):
+    seedsToSow = board[pit]
+    board[pit] = 0
+
+    while seedsToSow > 0:
+        pit = NEXT_PIT[pit]
+        if (playerTurn == '1' and pit == '2') or (
+            playerTurn == '2' and pit == '1'
+        ):
+            continue 
+        board[pit] += 1
+        seedsToSow -= 1
         
 
