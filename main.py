@@ -17,4 +17,12 @@ def main():
     gameBoard = getNewBoard()
     playerTurn = '1'
 
-    
+    while True:
+        print('\n' * 60)
+        displayBoard(gameBoard)
+        playerMove = askForPlayerMove(playerTurn, gameBoard)
+        playerTurn = makeMove(gameBoard, playerTurn, playerMove)
+
+        winner = checkforWinner(gameBoard)
+        
+
