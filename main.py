@@ -64,4 +64,7 @@ def askForPlayerMove(playerTurn, board):
         response input('> ').upper().strip()
         
         if response == 'QUIT':
-            
+            print('THanks for playing')
+            sys.exit
+        
+
