@@ -61,7 +61,7 @@ def askForPlayerMove(playerTurn, board):
             print('Player 1, choose move: A-F (or QUIT)')
         elif playerTurn =='2':
             print('Player 2, choose move G- L(or QUIT)')
-        response input('> ').upper().strip()
+        response = input('> ').upper().strip()
         
         if response == 'QUIT':
             print('THanks for playing')
