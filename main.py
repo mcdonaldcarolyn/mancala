@@ -89,4 +89,6 @@ def makeMove(board, playerTurn, pit):
         board[pit] += 1
         seedsToSow -= 1
         
+    if (pit == playerTurn == '1') or (pit == playerTurn == '2'):
+        return playerTurn
 
