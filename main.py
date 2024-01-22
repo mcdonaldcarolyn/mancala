@@ -67,9 +67,9 @@ def askForPlayerMove(playerTurn, board):
             print('THanks for playing')
             sys.exit
 
-        if (playerTurn == '1' and response not in PLAYER_1_PITS) or
-           (playerTurn == '2' and response not in PLAYER_2_PITS):
-            print (please pick a letter on your side)
+        if (playerTurn == '1' and response not in PLAYER_1_PITS) or (
+           playerTurn == '2' and response not in PLAYER_2_PITS):
+            print ('please pick a letter on your side')
             continue 
         if board.get(response)== 0:
             print('pick a non empty pits.')
@@ -106,10 +106,18 @@ def makeMove(board, playerTurn, pit):
     elif playerTurn == '2':
         return '1'
 
-def checkforWinner(board)
+def checkforWinner(board):
     player1Total = board['A'] + board['B'] + board['C']
     player1Total += board['D'] + board['E'] + board['F']
     player2Total = board['G'] + board['H'] + board['I']
     player2Total += board['J'] + board['K'] + board['L']
- 
+
+    if Player1Total == 0:
+        board['2'] += player2Total
+        for pit in PLAYER_2_PITS :
+            board[pit] = 0
+    elif player2Total == 0:
+        board['1'] += player1Total
+        for pit in PLAYER_1_PITS:
+            board[pit] = 0  
 
