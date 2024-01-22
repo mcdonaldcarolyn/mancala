@@ -129,4 +129,7 @@ def checkforWinner(board):
         return '2'
     else:
         return 'tie'
+    
+if __name__ == '__main__':
+    main()
 
