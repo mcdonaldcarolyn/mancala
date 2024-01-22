@@ -106,4 +106,10 @@ def makeMove(board, playerTurn, pit):
     elif playerTurn == '2':
         return '1'
 
+def checkforWinner(board)
+    player1Total = board['A'] + board['B'] + board['C']
+    player1Total += board['D'] + board['E'] + board['F']
+    player2Total = board['G'] + board['H'] + board['I']
+    player2Total += board['J'] + board['K'] + board['L']
+ 
 
