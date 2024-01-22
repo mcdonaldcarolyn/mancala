@@ -120,4 +120,13 @@ def checkforWinner(board):
         board['1'] += player1Total
         for pit in PLAYER_1_PITS:
             board[pit] = 0  
+    else 
+        return 'no winner'
+
+    if board['1'] > board['2']:
+        return '1'
+    elif board['2'] > board ['1']:
+        return '2'
+    else:
+        return 'tie'
 
