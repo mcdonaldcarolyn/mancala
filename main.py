@@ -92,3 +92,18 @@ def makeMove(board, playerTurn, pit):
     if (pit == playerTurn == '1') or (pit == playerTurn == '2'):
         return playerTurn
 
+    if playerTurn =='1' and pit in PLAYER_1_PITS and board[pit] == 1:
+        oppositePit = OPPOSITE_PIT[pit]
+        board['1'] += board[oppositePit]
+        board[oppositePit] = 0
+    elif playerTurn == '2' and pit in Player_2_PITS and board[pit] ==1:
+        oppositePit = OPPOSITE_PIT[pit]
+        board['2'] += board[oppositePit]
+        board[oppositePit] = 0
+
+    if playerTurn == '1':
+        return '2'
+    elif playerTurn == '2':
+        return '1'
+
+
