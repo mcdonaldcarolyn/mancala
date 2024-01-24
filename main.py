@@ -86,8 +86,8 @@ def makeMove(board, playerTurn, pit):
             playerTurn == '2' and pit == '1'
         ):
             continue 
-        board[pit] += '1'
-        seedsToSow -= '1'
+        board[pit] += 1
+        seedsToSow -= 1
         
     if (pit == playerTurn == '1') or (pit == playerTurn == '2'):
         return str(playerTurn)
